@@ -19,10 +19,12 @@
   # environment.
   home.packages = with pkgs; [
     git
+    zsh
   ];
 
   imports = [
     ./git.nix
+    ./zsh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
