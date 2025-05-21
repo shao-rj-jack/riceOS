@@ -4,15 +4,13 @@
 
     settings = {
       display = {
-        color = {
-          keys = "35";
-          output = "95";
-        };
+        color.output = "37";
+        separator = " -> ";
       };
 
       logo = {
         source = ./nixos.png;
-        # type = "kitty-direct";
+        type = "kitty-direct";
         height = 10;
         width = 20;
         padding = {
@@ -20,6 +18,30 @@
           left = 2;
         };
       };
+
+      modules = [
+        "break"
+        {
+          type     = "os";
+          key      = "riceOS";
+          keyColor = "34";
+        }
+        {
+          type     = "kernel";
+          key      = "|     ";
+          keyColor = "34";
+        }
+        {
+          type     = "packages";
+          key      = "|     ";
+          keyColor = "34";
+        }
+        {
+          type     = "shell";
+          key      = "|     ";
+          keyColor = "34";
+        }
+      ];
     };
   };
 }

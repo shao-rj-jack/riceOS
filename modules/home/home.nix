@@ -21,12 +21,14 @@
     git
     zsh
     fastfetch
+    kitty
   ];
 
   imports = [
     ./git.nix
     ./zsh
     ./fastfetch
+    ./kitty.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
