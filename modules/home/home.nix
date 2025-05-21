@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{config, pkgs, ...}:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -29,6 +29,7 @@
     ./zsh
     ./fastfetch
     ./kitty.nix
+    ./nvf.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
