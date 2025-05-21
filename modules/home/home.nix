@@ -20,11 +20,13 @@
   home.packages = with pkgs; [
     git
     zsh
+    fastfetch
   ];
 
   imports = [
     ./git.nix
     ./zsh
+    ./fastfetch
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

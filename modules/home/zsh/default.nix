@@ -24,6 +24,10 @@
       }
     ];
 
+    initExtra = ''
+      fastfetch
+    '';
+
     shellAliases = {
       v = "vim";
       os-home = "cd ~/riceOS";
