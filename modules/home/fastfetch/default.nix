@@ -28,17 +28,17 @@
         }
         {
           type     = "kernel";
-          key      = "|     ";
+          key      = "├     ";
           keyColor = "34";
         }
         {
           type     = "packages";
-          key      = "|     ";
+          key      = "├     ";
           keyColor = "34";
         }
         {
           type     = "shell";
-          key      = "|     ";
+          key      = "└     ";
           keyColor = "34";
         }
       ];
