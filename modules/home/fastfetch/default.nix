@@ -5,7 +5,7 @@
     settings = {
       display = {
         color.output = "37";
-        separator = " -> ";
+        separator = " ➜ ";
       };
 
       logo = {
@@ -22,24 +22,58 @@
       modules = [
         "break"
         {
-          type     = "os";
-          key      = "riceOS";
+          type = "os";
+          key = "riceOS";
           keyColor = "34";
         }
         {
-          type     = "kernel";
-          key      = " ├    ";
+          type = "kernel";
+          key = "├    ";
           keyColor = "34";
         }
         {
-          type     = "packages";
-          key      = " ├    ";
+          type = "packages";
+          key = "├ 󰏖   ";
           keyColor = "34";
         }
         {
-          type     = "shell";
-          key      = " └    ";
+          type = "shell";
+          key = "└    ";
           keyColor = "34";
+        }
+        "break"
+        {
+          type = "host";
+          format = "{5} {1} Type {2}";
+          key = "PC    ";
+          keyColor = "35";
+        }
+        {
+          type = "cpu";
+          format = "{1} ({3}) @ {7} GHz";
+          key = "├    ";
+          keyColor = "35";
+        }
+        {
+          type = "gpu";
+          format = "{1} {2} @ {12} GHz";
+          key = "├ 󰢮   ";
+          keyColor = "35";
+        }
+        {
+          type = "memory";
+          key = "├    ";
+          keyColor = "35";
+        }
+        {
+          type = "disk";
+          key = "├ 󰋊   ";
+          keyColor = "35";
+        }
+        {
+          type = "monitor";
+          key = "└    ";
+          keyColor = "35";
         }
       ];
     };
