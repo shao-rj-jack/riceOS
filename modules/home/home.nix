@@ -25,7 +25,6 @@
     zsh
     fastfetch
     kitty
-    waybar
     swaynotificationcenter
     rofi-wayland
   ];

@@ -1,5 +1,6 @@
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
+    # package = pkgs.hyprland;
     enable = true;
     xwayland.enable = true;
 
@@ -10,6 +11,10 @@
     };
 
     settings = {
+      exec-once = [
+        "killall -q waybar;sleep .5 && waybar"
+      ];
+
       general = {
         layout = "dwindle";
         gaps_in = 6;
