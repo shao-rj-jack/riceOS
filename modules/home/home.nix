@@ -24,6 +24,9 @@
     zsh
     fastfetch
     kitty
+    waybar
+    swaynotificationcenter
+    rofi-wayland
   ];
 
   imports = [
@@ -32,6 +35,11 @@
     ./fastfetch
     ./kitty.nix
     ./nvf.nix
+    ./hyprland
+    ./waybar.nix
+    ./swaync.nix
+    ./rofi.nix
+    ./xdg.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
