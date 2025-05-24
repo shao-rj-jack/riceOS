@@ -1,2 +1,5 @@
-{
+{pkgs, ...}: {
+  xdg = {
+    enable = true;
+  };
 }

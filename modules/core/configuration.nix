@@ -82,7 +82,7 @@
 
   programs = {
     firefox.enable = true;
-    hyprland.enable = false;
+    hyprland.enable = true;
   };
 
   # Allow unfree packages
