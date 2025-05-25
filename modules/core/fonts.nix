@@ -8,6 +8,7 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       symbola
+      nerd-fonts.jetbrains-mono
     ];
   };
 }
