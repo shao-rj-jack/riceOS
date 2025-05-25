@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   services.greetd = {
     enable = true;
-    vt = 3;
+    vt = 1;
 
     settings = {
       default_session = {
-        user = "ricejustice";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "greeter";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --cmd Hyprland --greeting \"Welcome! Enter credentials below:\" --remember --theme \"border=yellow;prompt=yellow;input=red\" --time";
       };
     };
   };

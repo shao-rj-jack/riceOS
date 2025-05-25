@@ -73,88 +73,86 @@ in {
       }
     ];
 
-    style = lib.strings.concatStrings [
-      ''
-        * {
-          font-family: JetBrainsMono Nerd Font Mono;
-          font-size: 18px;
-          border-radius: 0px;
-          border: none;
-          min-height: 0px;
-        }
+    style = ''
+      * {
+        font-family: JetBrainsMono Nerd Font Mono;
+        font-size: 18px;
+        border-radius: 0px;
+        border: none;
+        min-height: 0px;
+      }
 
-        window#waybar {
-          background: rgba(0, 0, 0, 0);
-        }
+      window#waybar {
+        background: rgba(0, 0, 0, 0);
+      }
 
-        #workspaces {
-          color: #FFFFFF;
-          background: #FF0000;
-          margin: 4px 4px;
-          padding: 5px 5px;
-          border-radius: 16px;
-        }
+      #workspaces {
+        color: #FFFFFF;
+        background: #FF0000;
+        margin: 4px 4px;
+        padding: 5px 5px;
+        border-radius: 16px;
+      }
 
-        #workspaces button {
-          font-weight: bold;
-          padding: 0px 5px;
-          margin: 0px 3px;
-          border-radius: 16px;
-          color: #FFFFFF;
-          background: #00FF00;
-          opacity: 0.5;
-          transition: ${betterTransition};
-        }
+      #workspaces button {
+        font-weight: bold;
+        padding: 0px 5px;
+        margin: 0px 3px;
+        border-radius: 16px;
+        color: #FFFFFF;
+        background: #00FF00;
+        opacity: 0.5;
+        transition: ${betterTransition};
+      }
 
-        #workspaces button.active {
-          font-weight: bold;
-          padding: 0px 5px;
-          margin: 0px 3px;
-          border-radius: 16px;
-          color: #FFFFFF;
-          background: #0000FF;
-          opacity: 1.0;
-          min-width: 40px;
-        }
+      #workspaces button.active {
+        font-weight: bold;
+        padding: 0px 5px;
+        margin: 0px 3px;
+        border-radius: 16px;
+        color: #FFFFFF;
+        background: #0000FF;
+        opacity: 1.0;
+        min-width: 40px;
+      }
 
-        #workspaces button.hover {
-          font-weight: bold;
-          border-radius: 16px;
-          color: #FFFFFF;
-          background: #F9C74F;
-          opacity: 0.8;
-          transition: ${betterTransition};
-        }
+      #workspaces button.hover {
+        font-weight: bold;
+        border-radius: 16px;
+        color: #FFFFFF;
+        background: #F9C74F;
+        opacity: 0.8;
+        transition: ${betterTransition};
+      }
 
-        tooltip {
-          border: 1px solid #FFFFFF;
-          border-radius: 12px;
-        }
+      tooltip {
+        border: 1px solid #FFFFFF;
+        border-radius: 12px;
+      }
 
-        tooltip label {
-          color: #FFFFFF;
-        }
+      tooltip label {
+        color: #FFFFFF;
+      }
 
-        #custom-exit, #battery {
-          font-size: 20px;
-          color: #FFFFFF;
-          background: #FF0000;
-          margin: 4px 0px;
-          margin-right: 7px;
-          border-radius: 8px 8px 8px 8px;
-          padding: 0px 18px;
-        }
+      #custom-exit, #battery {
+        font-size: 20px;
+        color: #FFFFFF;
+        background: #FF0000;
+        margin: 4px 0px;
+        margin-right: 7px;
+        border-radius: 8px 8px 8px 8px;
+        padding: 0px 18px;
+      }
 
-        #clock {
-          font-weight: bold;
-          font-size: 16px;
-          color: #FFFFFF;
-          background: #FF0000;
-          margin: 0px;
-          padding: 0px 5px 0px 5px;
-          border-radius: 16px 16px 16px 16px;
-        }
-      ''
-    ];
+      #clock {
+        font-weight: bold;
+        font-size: 16px;
+        color: #FFFFFF;
+        background: #FF0000;
+        margin: 0px;
+        padding: 0px 5px 0px 5px;
+        border-radius: 16px 16px 16px 16px;
+      }
+    '';
   };
 }
