@@ -6,13 +6,24 @@
   pkgs,
   ...
 }: {
+  environment.systemPackages = with pkgs; [
+    greetd.tuigreet
+    killall
+    libnotify
+    wget
+  ];
+
   imports = [
     ./flatpak.nix
     ./fonts.nix
     ./greetd.nix
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+
+  programs = {
+    firefox.enable = true;
+    hyprland.enable = true;
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -81,25 +92,8 @@
     ignoreShellProgramCheck = true;
   };
 
-  programs = {
-    firefox.enable = true;
-    hyprland.enable = true;
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    flatpak
-    greetd.tuigreet
-    killall
-    libnotify
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

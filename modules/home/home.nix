@@ -21,27 +21,20 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    git
-    zsh
-    fastfetch
-    kitty
-    wlogout
-    swaynotificationcenter
-    rofi-wayland
   ];
 
   imports = [
-    ./git.nix
-    ./zsh
     ./fastfetch
+    ./git.nix
+    ./hyprland
     ./kitty.nix
     ./nvf.nix
-    ./hyprland
+    ./rofi.nix
+    ./swaync.nix
     ./waybar.nix
     ./wlogout
     ./xdg.nix
-    ./swaync.nix
-    ./rofi.nix
+    ./zsh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
