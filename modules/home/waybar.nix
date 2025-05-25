@@ -36,7 +36,7 @@ in {
         "custom/exit" = {
           tooltip = false;
           format = "";
-          on-click = "sleep 0.1 $$ wlogout";
+          on-click = "sleep 0.1 && wlogout";
         };
 
         "battery" = {
