@@ -25,6 +25,7 @@
     zsh
     fastfetch
     kitty
+    wlogout
     swaynotificationcenter
     rofi-wayland
   ];
@@ -37,9 +38,10 @@
     ./nvf.nix
     ./hyprland
     ./waybar.nix
+    ./wlogout
+    ./xdg.nix
     ./swaync.nix
     ./rofi.nix
-    ./xdg.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
