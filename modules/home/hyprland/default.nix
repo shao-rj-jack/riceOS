@@ -1,9 +1,13 @@
-{pkgs, ...}: {
+{
+  imports = [
+    # ./hyprlock
+  ];
+
   systemd.user.targets.hyprland-session.Unit.wants = [
     "xdg-desktop-autostart.target"
   ];
+
   wayland.windowManager.hyprland = {
-    # package = pkgs.hyprland;
     enable = true;
     xwayland.enable = true;
 

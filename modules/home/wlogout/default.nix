@@ -29,7 +29,7 @@
       }
       {
         label = "lock";
-        action = "";
+        action = "sleep 1; hyprlock";
         text = "Lock (l)";
         keybind = "l";
       }
