@@ -1,6 +1,5 @@
 {
   imports = [
-    # ./hyprlock
   ];
 
   systemd.user.targets.hyprland-session.Unit.wants = [

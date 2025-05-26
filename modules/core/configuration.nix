@@ -23,6 +23,7 @@
   programs = {
     firefox.enable = true;
     hyprland.enable = true;
+    hyprlock.enable = true;
   };
 
   # Bootloader.
