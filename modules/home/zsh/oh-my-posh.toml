@@ -36,6 +36,23 @@ version = 3
 
 [[blocks]]
   type = 'prompt'
+  alignment = 'right'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'diamond'
+    leading_diamond = ''
+    trailing_diamond = ''
+    foreground = 'black'
+    background = 'cyan'
+    template = '{{.FormattedMs}}'
+
+    [blocks.segments.properties]
+      threshold = 5000
+
+[[blocks]]
+  type = 'prompt'
   alignment = 'left'
   newline = true
 
