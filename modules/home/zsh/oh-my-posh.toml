@@ -5,3 +5,50 @@ version = 3
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'diamond'
+    leading_diamond = ''
+    trailing_diamond = ''
+    foreground = 'white'
+    background = 'blue'
+    template = '{{.Path}}'
+
+    [blocks.segments.properties]
+      style = 'full'
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'black'
+    background_templates = [
+      "{{if or (.Staging.Changed) (.Working.Changed)}}yellow{{else}}green{{end}}"
+    ]
+    template = ' {{.HEAD}}{{if gt .Ahead 0}} ⇡{{end}}{{if gt .Behind 0}} ⇣{{end}}{{if gt (add (.Staging.Unmerged) (.Working.Unmerged)) 0}} ~{{add (.Staging.Unmerged) (.Working.Unmerged)}}{{end}}{{if .Staging.Changed}} +{{add (.Staging.Modified) (.Staging.Added) (.Staging.Deleted)}}{{end}}{{if gt .Working.Modified 0}} !{{.Working.Modified}}{{end}}{{if gt .Working.Untracked 0}} ?{{.Working.Untracked}}{{end}}{{if gt .Working.Deleted 0}} -{{.Working.Deleted}}{{end}}'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground_templates = [
+      "{{if gt .Code 0}}red{{else}}magenta{{end}}"
+    ]
+    background = 'transparent'
+    template = '❯'
+
+[secondary_prompt]
+  foreground = 'magenta'
+  background = 'transparent'
+  template = '❯❯ '
