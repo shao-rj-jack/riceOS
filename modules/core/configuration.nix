@@ -24,6 +24,7 @@
     ./fonts.nix
     ./greetd.nix
     ./hardware-configuration.nix
+    ./stylix.nix
   ];
 
   programs = {

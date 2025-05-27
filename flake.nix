@@ -10,12 +10,17 @@
     };
 
     nvf.url = "github:notashelf/nvf";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nvf,
+    stylix,
     ...
   } @ inputs: {
     nixosConfigurations.riceOS = nixpkgs.lib.nixosSystem {
@@ -32,6 +37,8 @@
             users.ricejustice = ./modules/home/home.nix;
           };
         }
+
+        stylix.nixosModules.stylix
       ];
     };
   };

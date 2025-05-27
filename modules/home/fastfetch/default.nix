@@ -75,8 +75,6 @@
           key = "└    ";
           keyColor = "35";
         }
-        "break"
-        "colors"
       ];
     };
   };
