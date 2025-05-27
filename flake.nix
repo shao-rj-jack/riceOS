@@ -12,7 +12,12 @@
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = {nixpkgs, home-manager, nvf, ...} @ inputs: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  } @ inputs: {
     nixosConfigurations.riceOS = nixpkgs.lib.nixosSystem {
       system = "x84_64-linux";
       modules = [

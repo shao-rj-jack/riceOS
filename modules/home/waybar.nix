@@ -84,8 +84,8 @@ in {
           on-click = "";
           tooltip = false;
           format = "{icon} {capacity}%";
-          format-charging = "󰂄{capacity}%";
-          format-plugged = "󱘖{capacity}%";
+          format-charging = "󰂄 {capacity}%";
+          format-plugged = "󱘖 {capacity}%";
 
           format-icons = [
             "󰁺"
