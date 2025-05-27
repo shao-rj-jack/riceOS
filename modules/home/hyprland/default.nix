@@ -4,6 +4,8 @@
   ];
 
   imports = [
+    ./binds.nix
+    ./windowrules.nix
   ];
 
   systemd.user.targets.hyprland-session.Unit.wants = [
@@ -26,7 +28,7 @@
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "killall -q swww; sleep .5 && swww-daemon"
         "killall -q waybar; sleep .5 && waybar"
-        "sleep 1.5 && swww img ./images/wooded-bay.jpg"
+        "sleep 1.5 && swww img ../../../wallpapers/wooded-bay.jpg"
       ];
 
       general = {
@@ -171,12 +173,6 @@
         "XDG_SESSION_DESKTOP, Hyprland"
         "MOZ_ENABLE_WAYLAND, 1"
         "EDITOR, nvim"
-      ];
-
-      "$modifier" = "SUPER";
-      bind = [
-        "$modifier,Return,exec,kitty"
-        "$modifier,W,exec,firefox"
       ];
     };
 
