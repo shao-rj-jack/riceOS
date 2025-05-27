@@ -14,12 +14,15 @@ in {
         layer = "top";
         position = "top";
         modules-center = ["hyprland/workspaces"];
-        modules-right = [
+        modules-left = [
           "custom/exit"
+        ];
+        modules-right = [
+          "cpu"
+          "memory"
           "battery"
           "clock"
         ];
-        modules-left = [];
 
         "hyprland/workspaces" = {
           format = "{name}";
@@ -37,6 +40,18 @@ in {
           tooltip = false;
           format = "";
           on-click = "sleep 0.1 && wlogout";
+        };
+
+        "cpu" = {
+          interval = 5;
+          format = " {usage:2}%";
+          tooltip = true;
+        };
+
+        "memory" = {
+          interval = 5;
+          format = " {}%";
+          tooltip = true;
         };
 
         "battery" = {
@@ -134,7 +149,16 @@ in {
         color: #FFFFFF;
       }
 
-      #custom-exit, #battery {
+      #custom-exit {
+        color: #FFFFFF;
+        background: #FF0000;
+        font-size: 22px;
+        margin: 0px;
+        padding: 0px 10px 0px 10px;
+        border-radius: 16px 16px 16px 16px;
+      }
+
+      #cpu, #memory, #battery {
         font-size: 20px;
         color: #FFFFFF;
         background: #FF0000;
