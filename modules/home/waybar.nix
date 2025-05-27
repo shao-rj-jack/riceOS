@@ -16,6 +16,7 @@ in {
         modules-center = ["hyprland/workspaces"];
         modules-left = [
           "custom/exit"
+          "tray"
         ];
         modules-right = [
           "cpu"
@@ -40,6 +41,10 @@ in {
           tooltip = false;
           format = "";
           on-click = "sleep 0.1 && wlogout";
+        };
+
+        "tray" = {
+          spacing = 12;
         };
 
         "cpu" = {
@@ -158,8 +163,18 @@ in {
         border-radius: 16px 16px 16px 16px;
       }
 
+      #tray {
+        font-weight: bold;
+        color: #FFFFFF;
+        background: #FF0000;
+        margin: 4px 0px;
+        margin-left: 7px;
+        border-radius: 8px 8px 8px 8px;
+        padding: 0px 18px;
+      }
+
       #cpu, #memory, #battery {
-        font-size: 20px;
+        font-weight: bold;
         color: #FFFFFF;
         background: #FF0000;
         margin: 4px 0px;
