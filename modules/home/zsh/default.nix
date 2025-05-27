@@ -6,6 +6,9 @@
     syntaxHighlighting.enable = true;
 
     initContent = ''
+      bindkey "^[[H" beginning-of-line
+      bindkey "^[[F" end-of-line
+      bindkey "^[[3~" delete-char
       eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config ${./oh-my-posh.toml})"
       fastfetch
     '';
