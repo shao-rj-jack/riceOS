@@ -5,10 +5,10 @@
       fira-code-symbols
       font-awesome
       material-icons
+      nerd-fonts.jetbrains-mono
       noto-fonts-cjk-sans
       noto-fonts-emoji
       symbola
-      nerd-fonts.jetbrains-mono
     ];
   };
 }
