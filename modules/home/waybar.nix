@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   betterTransition = "all 0.3s cubic-bezier(.55,-0.68,.48,1.682)";
 in {
   programs.waybar = {
@@ -16,7 +12,8 @@ in {
         modules-center = ["hyprland/workspaces"];
         modules-left = [
           "custom/exit"
-          "tray"
+          "tray" # nm-applet opens here
+          "pulseaudio"
         ];
         modules-right = [
           "cpu"
@@ -47,6 +44,30 @@ in {
           spacing = 12;
         };
 
+        "pulseaudio" = {
+          format = "{icon} {volume}% {format_source}";
+          format-bluetooth = "{icon} {volume}% {format_source}";
+          format-bluetooth-muted = "{icon}  {format_source}";
+          format-muted = " {format_source}";
+          format-source = " {volume}%";
+          format-source-muted = "";
+
+          format-icons = {
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            portable = "";
+            car = "";
+            default = [
+              ""
+              ""
+              ""
+            ];
+          };
+          on-click = "sleep 0.1 && pavucontrol";
+        };
+
         "cpu" = {
           interval = 5;
           format = " {usage:2}%";
@@ -63,8 +84,8 @@ in {
           on-click = "";
           tooltip = false;
           format = "{icon} {capacity}%";
-          format-charging = "󰂄 {capacity}%";
-          format-plugged = "󱘖 {capacity}%";
+          format-charging = "󰂄{capacity}%";
+          format-plugged = "󱘖{capacity}%";
 
           format-icons = [
             "󰁺"
@@ -163,7 +184,7 @@ in {
         border-radius: 16px 16px 16px 16px;
       }
 
-      #tray {
+      #tray, #pulseaudio {
         font-weight: bold;
         color: #FFFFFF;
         background: #FF0000;
