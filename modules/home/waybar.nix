@@ -134,7 +134,7 @@ in {
 
       #workspaces {
         color: #${config.lib.stylix.colors.base00};
-        background: #${config.lib.stylix.colors.base0F};
+        background: #${config.lib.stylix.colors.base03};
         margin: 4px 4px;
         padding: 5px 5px;
         border-radius: 16px;
@@ -146,7 +146,7 @@ in {
         margin: 0px 3px;
         border-radius: 16px;
         color: #${config.lib.stylix.colors.base00};
-        background: #${config.lib.stylix.colors.base06};
+        background: #${config.lib.stylix.colors.base02};
         opacity: 0.5;
         transition: ${betterTransition};
       }
@@ -157,7 +157,7 @@ in {
         margin: 0px 3px;
         border-radius: 16px;
         color: #${config.lib.stylix.colors.base00};
-        background: #${config.lib.stylix.colors.base07};
+        background: #${config.lib.stylix.colors.base06};
         opacity: 1.0;
         min-width: 40px;
       }

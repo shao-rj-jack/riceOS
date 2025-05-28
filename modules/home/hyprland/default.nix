@@ -42,7 +42,7 @@
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base07}) 45deg";
+        "col.active_border" = "rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base0A}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
