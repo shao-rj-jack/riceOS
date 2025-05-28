@@ -12,7 +12,7 @@ version = 3
     style = 'diamond'
     leading_diamond = ''
     trailing_diamond = ''
-    foreground = 'white'
+    foreground = 'black'
     background = 'blue'
     template = '{{.Path}}'
 

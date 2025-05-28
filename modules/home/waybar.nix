@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   betterTransition = "all 0.3s cubic-bezier(.55,-0.68,.48,1.682)";
 in {
   programs.waybar = {
@@ -128,8 +132,8 @@ in {
       }
 
       #workspaces {
-        color: #FFFFFF;
-        background: #FF0000;
+        color: #${config.lib.stylix.colors.base00};
+        background: #${config.lib.stylix.colors.base0F};
         margin: 4px 4px;
         padding: 5px 5px;
         border-radius: 16px;
@@ -140,8 +144,8 @@ in {
         padding: 0px 5px;
         margin: 0px 3px;
         border-radius: 16px;
-        color: #FFFFFF;
-        background: #00FF00;
+        color: #${config.lib.stylix.colors.base00};
+        background: #${config.lib.stylix.colors.base06};
         opacity: 0.5;
         transition: ${betterTransition};
       }
@@ -151,23 +155,14 @@ in {
         padding: 0px 5px;
         margin: 0px 3px;
         border-radius: 16px;
-        color: #FFFFFF;
-        background: #0000FF;
+        color: #${config.lib.stylix.colors.base00};
+        background: #${config.lib.stylix.colors.base07};
         opacity: 1.0;
         min-width: 40px;
       }
 
-      #workspaces button.hover {
-        font-weight: bold;
-        border-radius: 16px;
-        color: #FFFFFF;
-        background: #F9C74F;
-        opacity: 0.8;
-        transition: ${betterTransition};
-      }
-
       tooltip {
-        border: 1px solid #FFFFFF;
+        border: 1px solid #${config.lib.stylix.colors.base03};
         border-radius: 12px;
       }
 
@@ -176,8 +171,8 @@ in {
       }
 
       #custom-exit {
-        color: #FFFFFF;
-        background: #FF0000;
+        color: #${config.lib.stylix.colors.base00};
+        background: #${config.lib.stylix.colors.base0C};
         font-size: 22px;
         margin: 0px;
         padding: 0px 10px 0px 10px;
@@ -186,8 +181,8 @@ in {
 
       #tray, #pulseaudio {
         font-weight: bold;
-        color: #FFFFFF;
-        background: #FF0000;
+        color: #${config.lib.stylix.colors.base04};
+        background: #${config.lib.stylix.colors.base01};
         margin: 4px 0px;
         margin-left: 7px;
         border-radius: 8px 8px 8px 8px;
@@ -196,8 +191,8 @@ in {
 
       #cpu, #memory, #battery {
         font-weight: bold;
-        color: #FFFFFF;
-        background: #FF0000;
+        color: #${config.lib.stylix.colors.base04};
+        background: #${config.lib.stylix.colors.base01};
         margin: 4px 0px;
         margin-right: 7px;
         border-radius: 8px 8px 8px 8px;
@@ -207,8 +202,8 @@ in {
       #clock {
         font-weight: bold;
         font-size: 16px;
-        color: #FFFFFF;
-        background: #FF0000;
+        color: #${config.lib.stylix.colors.base00};
+        background: linear-gradient(90deg, #${config.lib.stylix.colors.base0D}, #${config.lib.stylix.colors.base07});
         margin: 0px;
         padding: 0px 5px 0px 5px;
         border-radius: 16px 16px 16px 16px;
