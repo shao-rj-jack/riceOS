@@ -28,6 +28,7 @@ in {
 
         "hyprland/workspaces" = {
           format = "{name}";
+          show-special = true;
           on-scroll-up = "hyprctl dispatch workspace e+1";
           on-scroll-down = "hyprctl dispatch workspace e-1";
 
@@ -172,7 +173,7 @@ in {
 
       #custom-exit {
         color: #${config.lib.stylix.colors.base00};
-        background: #${config.lib.stylix.colors.base0C};
+        background: linear-gradient(#${config.lib.stylix.colors.base0C}, #${config.lib.stylix.colors.base0D});
         font-size: 22px;
         margin: 0px;
         padding: 0px 10px 0px 10px;
@@ -203,7 +204,7 @@ in {
         font-weight: bold;
         font-size: 16px;
         color: #${config.lib.stylix.colors.base00};
-        background: linear-gradient(90deg, #${config.lib.stylix.colors.base0D}, #${config.lib.stylix.colors.base07});
+        background: linear-gradient(90deg, #${config.lib.stylix.colors.base0D}, #${config.lib.stylix.colors.base0C});
         margin: 0px;
         padding: 0px 5px 0px 5px;
         border-radius: 16px 16px 16px 16px;

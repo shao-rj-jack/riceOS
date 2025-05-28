@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     swww
   ];
@@ -38,8 +42,8 @@
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        # "col.active_border"
-        # "col.inactive_border"
+        "col.active_border" = "rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base07}) 45deg";
+        "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
       dwindle = {

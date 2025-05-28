@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   programs.wlogout = {
     enable = true;
 
@@ -53,20 +53,20 @@
       }
 
       button {
-        color: #FFFFFF;
+        color: #${config.lib.stylix.colors.base05};
         font-size: 16px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 25%;
         background-color: rgba(12, 12, 12, 0.8);
-        border: 3px solid #FFFFFF;
+        border: 3px solid #${config.lib.stylix.colors.base01};
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
 
       button:active, button:hover {
-        color: #FFFFFF;
-        background-color: rgba(0, 0, 255, 0.5);
-        border: 3px solid #0000FF;
+        color: #${config.lib.stylix.colors.base05};
+        background-color: rgba(37, 131, 209, 0.8);
+        border: 3px solid #${config.lib.stylix.colors.base01};
       }
 
       #shutdown {
