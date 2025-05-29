@@ -16,9 +16,11 @@ in {
         modules-center = ["hyprland/workspaces"];
         modules-left = [
           "custom/exit"
+          "custom/startmenu"
           "tray" # nm-applet opens here
           "pulseaudio"
         ];
+
         modules-right = [
           "cpu"
           "memory"
@@ -43,6 +45,13 @@ in {
           tooltip = false;
           format = "";
           on-click = "sleep 0.1 && wlogout";
+        };
+
+        "custom/startmenu" = {
+          tooltip = false;
+          format = "";
+          on-click = "sleep 0.1 && rofi-launcher";
+          #on-click = "sleep 0.1 && nwg-drawer -mb 200 -mt 200 -mr 200 -ml 200";
         };
 
         "tray" = {
@@ -180,7 +189,7 @@ in {
         border-radius: 16px 16px 16px 16px;
       }
 
-      #tray, #pulseaudio {
+      #custom-startmenu, #tray, #pulseaudio {
         font-weight: bold;
         color: #${config.lib.stylix.colors.base04};
         background: #${config.lib.stylix.colors.base01};

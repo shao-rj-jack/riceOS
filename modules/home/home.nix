@@ -31,6 +31,7 @@
     ./kitty.nix
     ./nvf.nix
     ./rofi.nix
+    ./scripts
     ./stylix.nix
     ./swaync.nix
     ./waybar.nix
