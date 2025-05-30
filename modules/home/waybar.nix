@@ -17,6 +17,7 @@ in {
         modules-left = [
           "custom/exit"
           "custom/startmenu"
+          "custom/hyprbindings"
           "tray" # nm-applet opens here
           "pulseaudio"
         ];
@@ -52,6 +53,12 @@ in {
           format = "";
           on-click = "sleep 0.1 && rofi-launcher";
           #on-click = "sleep 0.1 && nwg-drawer -mb 200 -mt 200 -mr 200 -ml 200";
+        };
+
+        "custom/hyprbindings" = {
+          tooltip = false;
+          format = "󱕴";
+          on-click = "sleep 0.1 && list-keybinds";
         };
 
         "tray" = {
@@ -189,7 +196,7 @@ in {
         border-radius: 16px 16px 16px 16px;
       }
 
-      #custom-startmenu, #tray, #pulseaudio {
+      #custom-startmenu, #custom-hyprbindings, #tray, #pulseaudio {
         font-weight: bold;
         color: #${config.lib.stylix.colors.base04};
         background: #${config.lib.stylix.colors.base01};
