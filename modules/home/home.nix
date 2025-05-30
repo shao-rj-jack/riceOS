@@ -30,7 +30,7 @@
     ./hyprland
     ./kitty.nix
     ./nvf.nix
-    ./rofi.nix
+    ./rofi
     ./scripts
     ./stylix.nix
     ./swaync.nix
