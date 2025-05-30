@@ -15,27 +15,24 @@
       drun-display-format = "{icon} {name}";
       display-drun = " Apps";
       display-run = " Run";
-      display-filebrowser = " File";
+      display-filebrowser = " Files";
     };
 
     theme = let
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
+        bg = mkLiteral "#${config.stylix.base16Scheme.base0C}";
         bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
         foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
-        selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
-        active = mkLiteral "#${config.stylix.base16Scheme.base0B}";
+        selected = mkLiteral "#${config.stylix.base16Scheme.base06}";
         text-selected = mkLiteral "#${config.stylix.base16Scheme.base00}";
         text-color = mkLiteral "#${config.stylix.base16Scheme.base05}";
-        border-color = mkLiteral "#${config.stylix.base16Scheme.base0F}";
-        urgent = mkLiteral "#${config.stylix.base16Scheme.base0E}";
+        urgent = mkLiteral "#${config.stylix.base16Scheme.base08}";
       };
 
       "window" = {
         transparency = "real";
-        width = mkLiteral "1000px";
         location = mkLiteral "center";
         anchor = mkLiteral "center";
         fullscreen = false;
@@ -49,43 +46,36 @@
 
       "mainbox" = {
         enabled = true;
-        spacing = mkLiteral "0px";
-        orientation = mkLiteral "horizontal";
+        margin = mkLiteral "10px";
+        spacing = mkLiteral "10px";
         background-color = mkLiteral "transparent";
-
-        children = map mkLiteral [
-          "imagebox"
-          "listbox"
-        ];
-      };
-
-      "imagebox" = {
-        padding = mkLiteral "20px";
-        background-color = mkLiteral "transparent";
-        background-image = mkLiteral ''url("~/riceOS/wallpapers/wave.jpg", height)'';
-        orientation = mkLiteral "vertical";
 
         children = map mkLiteral [
           "inputbar"
-          "dummy"
+          "message"
+          "listview"
           "mode-switcher"
         ];
       };
 
-      "listbox" = {
-        spacing = mkLiteral "20px";
-        padding = mkLiteral "20px";
+      "message" = {
         background-color = mkLiteral "transparent";
-        orientation = mkLiteral "vertical";
-
-        children = map mkLiteral [
-          "message"
-          "listview"
-        ];
       };
 
-      "dummy" = {
-        background-color = mkLiteral "transparent";
+      "textbox" = {
+        padding = mkLiteral "15px";
+        border-radius = mkLiteral "10px";
+        background-color = mkLiteral "@bg-alt";
+        text-color = mkLiteral "@foreground";
+        vertical-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.0";
+      };
+
+      "error-message" = {
+        padding = mkLiteral "15px";
+        border-radius = mkLiteral "20px";
+        background-color = mkLiteral "@bg";
+        text-color = mkLiteral "@foreground";
       };
 
       "inputbar" = {
@@ -117,26 +107,6 @@
         cursor = mkLiteral "text";
         placeholder = "Search";
         placeholder-color = mkLiteral "inherit";
-      };
-
-      "mode-switcher" = {
-        enabled = true;
-        spacing = mkLiteral "20px";
-        background-color = mkLiteral "transparent";
-        text-color = mkLiteral "@foreground";
-      };
-
-      "button" = {
-        padding = mkLiteral "15px";
-        border-radius = mkLiteral "10px";
-        background-color = mkLiteral "@bg-alt";
-        text-color = mkLiteral "inherit";
-        cursor = mkLiteral "pointer";
-      };
-
-      "button selected" = {
-        background-color = mkLiteral "@selected";
-        text-color = mkLiteral "@foreground";
       };
 
       "listview" = {
@@ -211,23 +181,23 @@
         horizontal-align = mkLiteral "0.0";
       };
 
-      "message" = {
+      "mode-switcher" = {
+        enabled = true;
+        spacing = mkLiteral "20px";
         background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@foreground";
       };
 
-      "textbox" = {
+      "button" = {
         padding = mkLiteral "15px";
         border-radius = mkLiteral "10px";
         background-color = mkLiteral "@bg-alt";
-        text-color = mkLiteral "@foreground";
-        vertical-align = mkLiteral "0.5";
-        horizontal-align = mkLiteral "0.0";
+        text-color = mkLiteral "inherit";
+        cursor = mkLiteral "pointer";
       };
 
-      "error-message" = {
-        padding = mkLiteral "15px";
-        border-radius = mkLiteral "20px";
-        background-color = mkLiteral "@bg";
+      "button selected" = {
+        background-color = mkLiteral "@selected";
         text-color = mkLiteral "@foreground";
       };
     };

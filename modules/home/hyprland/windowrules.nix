@@ -3,6 +3,7 @@
     windowrulev2 = [
       "tag +settings, class:^(nm-applet|nm-connection-editor)$"
       "tag +settings, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"
+      "tag +settings, class:^([Rr]ofi)$"
       "tag +terminal, class:^(kitty)$"
 
       "float, tag:settings*"
