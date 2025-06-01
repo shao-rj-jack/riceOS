@@ -32,6 +32,7 @@
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "killall -q swww; sleep .5 && swww-daemon"
         "killall -q waybar; sleep .5 && waybar"
+        "killall -q swaync; sleep .5 && swaync"
         "nm-applet --indicator"
         "sleep 1.5 && swww img ../../../wallpapers/wooded-bay.jpg"
       ];
@@ -181,6 +182,7 @@
       ];
     };
 
+    # add generated monitor configs here
     extraConfig = "
       monitor = ,preferred,auto,auto
     ";

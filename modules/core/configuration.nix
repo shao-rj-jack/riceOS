@@ -13,6 +13,7 @@
     killall # utility to kill all programs that match a condition
     libnotify # needed for notifications
     networkmanagerapplet # ui-based network managing
+    nwg-displays # for generating monitor configs
     pamixer # pulseaudio command line mixer
     pavucontrol # for editing audio levels and devices
     playerctl # command to control media players

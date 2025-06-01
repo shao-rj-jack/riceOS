@@ -26,6 +26,7 @@ in {
           "cpu"
           "memory"
           "battery"
+          "custom/notification"
           "clock"
         ];
 
@@ -127,6 +128,28 @@ in {
           };
         };
 
+        "custom/notification" = {
+          tooltip = false;
+          format = "{icon} {}";
+
+          format-icons = {
+            notification = "<span foreground='red'><sup></sup></span>";
+            none = "";
+            dnd-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-none = "";
+            inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            inhibited-none = "";
+            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = "";
+          };
+
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "sleep 0.1 && ${pkgs.swaynotificationcenter}/bin/swaync-client -t &";
+          escape = true;
+        };
+
         "clock" = {
           format = '' {:L%I:%M %p}'';
           tooltip = true;
@@ -206,7 +229,7 @@ in {
         padding: 0px 18px;
       }
 
-      #cpu, #memory, #battery {
+      #cpu, #memory, #battery, #custom-notification {
         font-weight: bold;
         color: #${config.lib.stylix.colors.base04};
         background: #${config.lib.stylix.colors.base01};

@@ -4,6 +4,7 @@
     bind = [
       # applications
       "$modifier,Return,exec,kitty"
+      "$modifier,k,exec,list-keybinds"
       "$modifier,m,exec,pavucontrol"
       "$modifier,w,exec,firefox"
 
