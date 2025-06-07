@@ -6,7 +6,7 @@
     settings = {
       default_session = {
         user = "greeter";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --cmd Hyprland --greeting \"Welcome! Enter credentials below:\" --remember --theme \"border=yellow;prompt=yellow;input=red\" --time";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --cmd Hyprland --greeting \"Welcome! Enter credentials below:\" --remember --time";
       };
     };
   };
